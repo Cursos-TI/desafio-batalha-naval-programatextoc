@@ -7,6 +7,14 @@ printf("Tabuleiro batalha naval:\n");
 int Tabuleiro [10][10]={0};
 char Colunas[10]={'A','B','C','D','E','F','G','H','I','J'};
 
+//Posição do navio diagonal
+for(i=7;i<=9;i++){
+j=i;Tabuleiro[i][j]=3;}
+
+//Diagonal secundaria
+for(i=1;i<=3;i++){
+j=4-i;Tabuleiro[i][j]=3;}
+
 //Posição do navio horizontal
 for(j=3;j<=5;j++){
 Tabuleiro[6][j]=3;}
