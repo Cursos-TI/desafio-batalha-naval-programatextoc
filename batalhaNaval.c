@@ -33,7 +33,7 @@ printf("%2d ", i+1);
 
 for(int j=1 ;j<10 ;j++){
 printf("%d ", Tabuleiro[i][j]);}
-printf("\n*************************\n");}
+printf("\n");}
 
 return 0;}
 
