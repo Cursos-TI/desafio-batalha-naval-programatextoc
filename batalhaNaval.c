@@ -7,6 +7,41 @@ printf("Tabuleiro batalha naval:\n");
 int Tabuleiro [10][10]={0};
 char Colunas[10]={'A','B','C','D','E','F','G','H','I','J'};
 
+//Cone
+int Linha,Coluna;
+int LinhaBase =9;
+int LinhaSuperior =7;
+int ColunaCentral =3;
+int Cone =2;
+int LarguraAtual;
+int ColunaInicial;
+int ColunaFinal; 
+
+for(Linha=LinhaSuperior;Linha<=LinhaBase;Linha++){
+
+LarguraAtual=Linha-LinhaSuperior;
+ColunaInicial=ColunaCentral-LarguraAtual;
+ColunaFinal=ColunaCentral+LarguraAtual;
+
+for(Coluna=ColunaInicial;Coluna<=ColunaFinal;Coluna++){
+if(Coluna>=0 && Coluna<10){
+Tabuleiro[Linha][Coluna]=Cone;}}}
+
+//Impressão do cone
+printf("\n***Cone***\n");
+printf("   ");
+for(Coluna=0;Coluna<10;Coluna++){
+printf("%c ", Colunas[Coluna]);}
+printf("\n");
+
+for(Linha=0;Linha<10;Linha++){
+printf("%2d ",Linha+1);
+
+for(Coluna=0;Coluna<10;Coluna++){
+printf("%d ",Tabuleiro[Linha][Coluna]);}
+printf("\n");}
+
+
 //Posição do navio diagonal
 for(i=7;i<=9;i++){
 j=i;Tabuleiro[i][j]=3;}
