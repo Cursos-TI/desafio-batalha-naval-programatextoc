@@ -78,14 +78,23 @@ for(j=0;j<10;j++){
 printf("%d ",Tabuleiro[i][j]);}
 printf("\n");}
 
+//Cruz
+int cruz=1;
+int x,y;
+
+for(x=1;x<=4;x++){
+Tabuleiro[x][3]=cruz;}
+
+for(y=2;y<=4;y++){
+Tabuleiro[2][y]=cruz;}
 
 //Posição do navio diagonal
 for(i=7;i<=9;i++){
 j=i;Tabuleiro[i][j]=3;}
 
 //Diagonal secundaria
-for(i=1;i<=3;i++){
-j=4-i;Tabuleiro[i][j]=3;}
+for(i=1;i<=2;i++){
+j=3-i;Tabuleiro[i][j]=3;}
 
 //Posição do navio horizontal
 for(j=3;j<=5;j++){
@@ -103,7 +112,7 @@ printf("\n");
 for(int i=0; i<10; i++){
 printf("%2d ", i+1);
 
-for(int j=1 ;j<10 ;j++){
+for(int j=0 ;j<10 ;j++){
 printf("%d ", Tabuleiro[i][j]);}
 printf("\n");}
 
